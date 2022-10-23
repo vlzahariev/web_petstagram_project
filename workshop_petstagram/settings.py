@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-86ka$%gn1ib1cuwng(d$p51u-iti%4gso5a)&h&)z%^bhu)_)u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
@@ -84,8 +84,12 @@ WSGI_APPLICATION = 'workshop_petstagram.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'python_web_db',
+        'USER': 'berkmena',
+        'PASSWORD': 'posgrespw',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 

@@ -1,3 +1,11 @@
 from django.contrib import admin
 
-# Register your models here.
+from workshop_petstagram.pets.models import Pet
+
+
+@admin.register(Pet)
+class PetAdmin(admin.ModelAdmin):
+    list_display = (
+        'name',
+        'slug',
+    )
